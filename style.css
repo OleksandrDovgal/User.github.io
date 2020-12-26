@@ -4,3 +4,30 @@
 body {
     font-family: 'Roboto', sans-serif;
 }
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+[class*="col-"] {
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.col-md-3 {
+    width: 25%;
+}
+.col-md-6 {
+    width: 50%;
+}
