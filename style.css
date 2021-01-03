@@ -165,7 +165,7 @@ body {/*підключення тексту Roboto*/
 .submenu > li > a:hover {/*дії при наведенні на <a> */
     color: #2c71b8;
     background-color: white ;
-    padding-left: 5px;}
+}
 
 
 
