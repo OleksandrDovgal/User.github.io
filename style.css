@@ -134,8 +134,8 @@ body {/*підключення тексту Roboto*/
 
 
 
-.submenu > li {
-    width: 142px;
+.submenu > li {/*рзмір ВИПАДАЮЧОГО МЕНЮ*/
+    width: 143px;
 }
 .submenu > li > a {
     display: block;/*однакові розміри a та li*/
@@ -148,13 +148,14 @@ body {/*підключення тексту Roboto*/
     text-align: center;/*центрування контенту*/
     line-height: 50px;    
 } 
-
-.menu ul li a{
+.subposition {/*ВИПАДАЮЧЕ МЕНЮ*/
     display: block;
     position: relative;
 }
-.submenu {
+.submenu {/*позиціонування ВИПАДАЮЧОГО МЕНЮ відносно li subposiion*/
     display: none;
+    position: absolute;
+    left: -1px;
 }
 .submenu ul li {
     position: absolute;
@@ -166,25 +167,14 @@ body {/*підключення тексту Roboto*/
     color: #2c71b8;
     background-color: white ;
 }
-
-
-
-
-
-
-
-
-/* 
-.submenu {
-    display: none;
-    position: absolute;
-}
-
-nav ul li a:hover {
+.menu > li:hover > a {/*hover залишається, навіть коли ми не на ньому*/
     background-color: #2c71b8;
     color: white;
 }
+.active:hover { 
+    background-image: url("images/arrow-down.png");/*додали кутик в меню*/
+    background-repeat: no-repeat;
+    background-size: 10px 10px; 
+    background-position: 118px 20px;/*позиціонуємо 1-X 2-Y*/
+}
 
-nav ul li a:hover .submenu {
-    display: block;
-} */
