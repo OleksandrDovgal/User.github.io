@@ -38,11 +38,19 @@ body {/*підключення тексту Roboto*/
 .col-md-4 {
     width: 50%;
 }
-.col-md-4_одна_четверта_від_12 {
-    width: 33.3333%;
-    margin-left: 15px;
-    
+.col-md-4 {/*1/4 від 12 */
+    width: 33.3%;
+    /* margin-left: 5px; */
+    padding-left: 0;
+    padding-top: 30px;
 }
+.catalog { /*вирівнювання всього рядка товарів*/
+    margin-left: 15px;
+
+}
+
+
+
 .col-md-8 {
     width: 50%;
 }
@@ -119,11 +127,7 @@ body {/*підключення тексту Roboto*/
     position: absolute;
     right: 4px;
 }
- /* .img-search { -цей блок був би потрібен дл ч. коду html 
-    position: absolute;
-    top: 12px;
-    right: 13px; 
-}  */
+
 .cart { 
     width: 40px;
     height: 40px;
@@ -226,11 +230,31 @@ body {/*підключення тексту Roboto*/
 
 }
 
-.filer {/*фільтр*/
-    width: 25%;
+.filter {/*фільтр*/
+    width: 270px;
     height: 845px;
-    border-right: 1px solid black;
-    border-top: 1px solid black;
+    border-top: 1px solid white;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    /*device type: top 35px - bold 21px
+    left 30px;
+    text у фільтрі light 21px;
+    кнопка SUBMIT - 210x50, bold 21, 
+    всі кнопки в товарах
+
+    3 блоки + строка + кнопка;
+    між device і laptop - 25px;
+    laptop-tablet - 25px;
+    tablet-color-65px;
+    orange-RAM-65px;
+    8GB-строки-30px; 
+    від строки до кнопки- 30px;
+
+    */
+
+}
+.breadcrumbs {
+    padding-bottom: 28px;
 }
 .breadcrumbs > li {
     float: left;
@@ -248,15 +272,13 @@ body {/*підключення тексту Roboto*/
     width: 10px;
     height: 10px;
 }
-/* .breadcrumbs > li > a::after {
-    background-image: url("images/breadcrumbs\ \(2\).png");
-} */
+
 .current_page {
     font-weight: 300;
     font-size: 14px; 
     color: #96b8dc; 
-    text-decoration: underline;  
-
+    text-decoration: underline; 
+    
 }
 /* .breadcrumbs > li:last-child { саме що і вище current_page
     text-decoration: underline;
@@ -265,61 +287,93 @@ body {/*підключення тексту Roboto*/
     width: 500px;
     height: 100px;
 
-    padding-top: 30px;
+    /* padding-top: 30px; */
     padding-left: 15px;
-    margin-bottom: 50px;
-    /* padding-bottom: 60px; */
+    /* margin-bottom: 50px; */
+    /* padding-bottom: 30px; */
     font-size: 48px;
     font-weight: bold;
     color: white;
-}       
+}    
 
-.product {/*1 продукт1*/
+.desktop {/*1 продукт1*/
     width: 270px;
     height: 652px;
-    text-align: center;/*центрвання img по ширині*/
+    /* padding-left: 15px; */
+    text-align: center;/*центрування img по ширині*/
     
-    /* margin-top: 60px; */
-    /* padding-top: 165px; */
+
     /* padding-left: 15px;
     padding-right: 15px; */
-    border: 1px solid rgb(255, 255, 255);
+    border: 1px solid white;
     
     position: relative;
 }
 
- .product-image1 {
+
+ .product-desktop-img {
     width: 268px;
     height: 180px;
-    /* display: block; */
+
     background-color: #cadbed;
      position: relative;
-    /* z-index: 5;     */
 } 
-.product-image1 > a {
-    /* display: block; */
+.desktop-img {
+    padding-top: 50px;
 }
-/* .btn-product-1 {
-    padding-bottom: 50px;
+.icon {
+    width: 28px;
+    height: 28px;
+    /* padding: 10px; */
+    border: 1px solid #2c71b8;
+    /* position: absolute; */
+    /* top: 0; 
+    left: 0; */
 }
-.btn-product-2 {
-    padding-bottom: 25px;
-} */
-.product1-img {
 
-    padding-top: 45px;
-    /* position: absolute;          1
-    left: 0px;                   2
-    right: 0px;                  3
-    margin: 0 auto;              4
-    top: calc( 50% - 60px); 2ге значення половина висоти
-    z-index: 20; */
+.lighter {
+    position: absolute;
+    top: 7px;
+    right:  7px;
+    background-image: url("images/lighter.png");
+    background-repeat: no-repeat;
+    background-position: 3px 3px;
 }
-.title-product {
+.lighter:hover {
+    padding: 5px;
+    background-color: #2c71b8;
+    background-image: url("images/lighter-white.png");
+    background-repeat: no-repeat;
+    background-position: 4px 4px;
+    background-size: 18px 18px;
+}
+.like {
+    position: absolute;
+    top: 47px;
+    right: 7px; 
+    background-image: url("images/favorite.png");
+    background-repeat: no-repeat;
+    background-position: 4px 4px;
+}
+.like:hover {
+
+    /* background-color: #2c71b8; */
+    background-image: url("images/favorite-white.png");
+    background-repeat: no-repeat;
+    background-position: 4px 4px;
+    background-size: 18px 18px;
+    background-color: #2c71b8;
+}
+
+
+
+ 
+ .title-product   {
     padding-top: 13px;
-    font-size: 30px;
-    font-weight: bold;
-
+    font-size: 30px;/*має бути 30px з photopea*/
+    font-weight: bold;/*photopea*/
+/*Lorem - 21 light*/
+/*Нахви х-ки - 21 bold*/
     color: white;
     text-align: justify;
     padding-left: 15px;
@@ -333,9 +387,6 @@ body {/*підключення тексту Roboto*/
     padding-left: 15px;
     padding-right: 15px;
 }
-
-
-/*продовжити тут*/
 .features-body {
     /* padding-top: 10px; */
     padding-left: 15px;
@@ -355,7 +406,7 @@ body {/*підключення тексту Roboto*/
 }
 .product-price {
     padding-top: 35px;
-    font-size: 35px;
+    font-size: 35px;/*48 bold(photoea)-35факт */
     font-weight: bold;
     text-align: center;
     color: white;
@@ -363,7 +414,7 @@ body {/*підключення тексту Roboto*/
     position: relative;
 }
 .price-cent {
-    font-size: 21px;
+    font-size: 21px;/*20px-факт*/
 
     position: absolute;
     top: 35px;
@@ -371,7 +422,7 @@ body {/*підключення тексту Roboto*/
 }
 
 .product-button {
-/* text-align: right; */
+
     padding-top: 30px;
     padding-left: 30px;
     padding-right: 30px;
@@ -411,228 +462,28 @@ body {/*підключення тексту Roboto*/
     background-color: white;
     background-image: url("images/cart.png");
     background-size: 17px 17px;
-
-}
-.img {
-    width: 28px;
-    height: 28px;
-    padding: 4px;
-    border: 1px solid #2c71b8;
-}
-.lighter {
-    position: absolute;
-    top: 10px;
-    right: 10px; 
-}
-.lighter:hover {
-    padding: 5px;
-    background-color: #2c71b8;
-    background-image: url("images/lighter-white.png");
-    background-repeat: no-repeat;
-    background-position: 4px 4px;
-    background-size: 18px 18px;
-}
-.favorite {
-    position: absolute;
-    top: 50px;
-    right: 10px; 
-}
-.favorite:hover {
-    padding: px;
-    /* background-color: #2c71b8; */
-    background-image: url("images/favorite-white.png");
-    background-repeat: no-repeat;
-    background-position: 4px 4px;
-    background-size: 18px 18px;
-    /* position: absolute;
-    z-index: 5; */
-
 }
 
 
 
 /* 
-30x30 квадрат
-lighter 20x20
-like    18x16 або 18x18
-border #548cc5
-/////////////////
-доробити інші товари */
-/* картинки лайк і лайтер зробити через bg-image
-без блоку favorite-lighter в html */
+винести центи центи у другому товарі в окремий клас
+css - мультикласовість
+і спозиціонувати його  
 
 
-.product1 {/*1 продукт1*/
-    width: 270px;
-    height: 652px;
-    text-align: center;/*центрвання img по ширині*/
-    
-    /* margin-top: 60px; */
-    /* padding-top: 165px; */
-    /* padding-left: 15px;
-    padding-right: 15px; */
-    border: 1px solid rgb(255, 255, 255);
-    
-    position: relative;
-}
+*/
+/*між іконками like and lighter 10px відступи
+ від рамки товару і між ними обома*/
+ 
+ /*30px top між крихтами та заголовком*/
+ 
+ /*60px від букви L до товару*/
 
- .product-image1 {
-    width: 268px;
-    height: 180px;
-    /* display: block; */
-    background-color: #cadbed;
-     position: relative;
-    /* z-index: 5;     */
-} 
-.product-image1 > a {
-    /* display: block; */
-}
-/* .btn-product-1 {
-    padding-bottom: 50px;
-}
-.btn-product-2 {
-    padding-bottom: 25px;
-} */
-.product1-img {
+/*30px від фільтра до товару*/
+/*------------------------------------------------------------------------*/
 
-    padding-top: 45px;
-    /* position: absolute;          1
-    left: 0px;                   2
-    right: 0px;                  3
-    margin: 0 auto;              4
-    top: calc( 50% - 60px); 2ге значення половина висоти
-    z-index: 20; */
-}
-.title-product {
-    padding-top: 13px;
-    font-size: 30px;
-    font-weight: bold;
+/*додати до імені класу центів ім`я, щоб через
+мультикласовість спозиціонувати центи в css */
 
-    color: white;
-    text-align: justify;
-    padding-left: 15px;
-}
-.description {
-    font-size: 21px;
-    font-weight: 100;
-    text-align: left;
-    color: white;
-    padding-top: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-
-/*продовжити тут*/
-.features-body {
-    /* padding-top: 10px; */
-    padding-left: 15px;
-    color: white;
-    text-align: left;
-}
-.features-text1 {
-    padding-top: 20px;
-    font-weight: bold;
-    font-size: 50;
-}
-.features-text2 {
-    padding-top: 20px;
-    font-size: 21px;
-    font-weight: 300;
-
-}
-.product-price {
-    padding-top: 35px;
-    font-size: 35px;
-    font-weight: bold;
-    text-align: center;
-    color: white;
-
-    position: relative;
-}
-.price-cent {
-    font-size: 21px;
-
-    position: absolute;
-    top: 35px;
-    right: 65px;
-}
-
-.product-button {
-/* text-align: right; */
-    padding-top: 30px;
-    padding-left: 30px;
-    padding-right: 30px;
-}
-.product-2 {
-    padding-top: 20px;
-}
-.btn {
-    width: 206px;
-    height: 48px;
-    /* border: 1px solid white; */
-    text-align: center;
-    background-color: #2c71b8;
-    color: white;/*спільний колір 
-    для обох кнопок*/
-    border: 1px solid white;
-    font-size: 20px;
-    font-weight: 100;
-}
-.btn-product-1 {
-    padding-bottom: 15px;
-    
-}
-.one:hover {
-    color: #2c71b8;
-    background-color: white;
-}
-.two {
-    background-color: #598fc7;
-    background-image: url("images/cart-white.png");
-    background-repeat: no-repeat;
-    /* background-size: 15px 15px; */
-    background-position: right 13px top 13px;
-}
-.two:hover {
-    color: #598fc7;
-    background-color: white;
-    background-image: url("images/cart.png");
-    background-size: 17px 17px;
-
-}
-.img {
-    width: 28px;
-    height: 28px;
-    padding: 4px;
-    border: 1px solid #2c71b8;
-}
-.lighter {
-    position: absolute;
-    top: 10px;
-    right: 10px; 
-}
-.lighter:hover {
-    padding: 5px;
-    background-color: #2c71b8;
-    background-image: url("images/lighter-white.png");
-    background-repeat: no-repeat;
-    background-position: 4px 4px;
-    background-size: 18px 18px;
-}
-.favorite {
-    position: absolute;
-    top: 50px;
-    right: 10px; 
-}
-.favorite:hover {
-    padding: px;
-    /* background-color: #2c71b8; */
-    background-image: url("images/favorite-white.png");
-    background-repeat: no-repeat;
-    background-position: 4px 4px;
-    background-size: 18px 18px;
-    /* position: absolute;
-    z-index: 5; */
-
-}
+/*до імені товарів додати мультикласовість*/
