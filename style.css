@@ -35,9 +35,9 @@ body {/*підключення тексту Roboto*/
 .col-md-9 {
     width: 75%;
 }
-.col-md-4 {
+/* .col-md-4 {
     width: 50%;
-}
+} */
 .col-md-4 {/*1/4 від 12 */
     width: 33.3%;
     /* margin-left: 5px; */
@@ -227,32 +227,126 @@ body {/*підключення тексту Roboto*/
 
 .main {
     height: 2335px;
-
+    border-top: 1px solid white;
 }
 
 .filter {/*фільтр*/
     width: 270px;
-    height: 845px;
-    border-top: 1px solid white;
+    height: 888px;
+    background-color: rgba(202, 219, 237, 0.25);
+
+
     border-right: 1px solid white;
-    border-bottom: 1px solid white;
-    /*device type: top 35px - bold 21px
-    left 30px;
+    /*device type: top 30-35px - bold 21px
+    left 30px - photopea;
     text у фільтрі light 21px;
     кнопка SUBMIT - 210x50, bold 21, 
-    всі кнопки в товарах
-
+    всі кнопки в товарах;
     3 блоки + строка + кнопка;
-    між device і laptop - 25px;
+    між device і laptop - 25px photopea;
     laptop-tablet - 25px;
     tablet-color-65px;
     orange-RAM-65px;
     8GB-строки-30px; 
     від строки до кнопки- 30px;
+    Додоти написи флажків p і спозиціонувати його
+    */}
 
-    */
-
+.filter-label::before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin-top: 30px;
+    border: 1px solid white;
+    cursor: pointer;
 }
+.filter-input:checked + .filter-label::before{
+    background-color: white;
+}
+.filter-input { /*сховали checkbox*/
+    display: none;
+}
+.filter-label {
+    font-size: 21px;
+    font-weight: 100;
+    color: white;
+    cursor: pointer;
+    position: relative;
+}
+.DEVICE-TYPE {
+    padding-top: 33px;
+    padding-left: 30px;
+    padding-bottom: 65px;
+    color: white;
+    font-size: 21px;
+    font-weight: bold;
+    }   
+.COLOR {
+    /* padding-top: 30px; */
+    padding-left: 30px;
+    padding-bottom: 65px;
+    color: white;
+    font-size: 21px;
+    font-weight: bold;
+    } 
+.RAM-TYPE {
+    padding-left: 30px;
+    padding-bottom: 30px;
+    color: white;
+    font-size: 21px;
+    font-weight: bold;
+    /*додати відступи лейблам та додати контент*/
+    } 
+
+.filter-more-options {
+    /* padding-top: 30px; */
+    padding-left: 37px;
+    font-size: 21px;
+    font-weight: 100;
+    color: white;
+}
+
+.filter-btn-submit {
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+}
+.btn-submit {
+    width: 206px;
+    height: 48px;
+    text-align: center;
+    background-color: #2c71b8;
+    color: white;
+    border: 1px solid white;
+    font-size: 20px;
+    font-weight: 100;
+}
+.btn-submit:hover {
+    color: #2c71b8;
+    background-color: white;
+}
+.filter-block-device-type {
+    font-size: 21px;
+    font-weight: 100;
+    
+}
+/* p{
+    font-size: 21px;
+    font-weight: 100;
+    position: absolute;
+    top: 10px;
+    
+} */
+
+
+
+
+
+
+
+
+
 .breadcrumbs {
     padding-bottom: 28px;
 }
@@ -295,6 +389,18 @@ body {/*підключення тексту Roboto*/
     font-weight: bold;
     color: white;
 }    
+.sort {
+    float: right;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    
+}
+
+
+
+
+
 
 .desktop {/*1 продукт1*/
     width: 270px;
@@ -333,8 +439,8 @@ body {/*підключення тексту Roboto*/
 
 .lighter {
     position: absolute;
-    top: 7px;
-    right:  7px;
+    top: 10px;
+    right:  10px;
     background-image: url("images/lighter.png");
     background-repeat: no-repeat;
     background-position: 3px 3px;
@@ -349,8 +455,8 @@ body {/*підключення тексту Roboto*/
 }
 .like {
     position: absolute;
-    top: 47px;
-    right: 7px; 
+    top: 50px;
+    right: 10px; 
     background-image: url("images/favorite.png");
     background-repeat: no-repeat;
     background-position: 4px 4px;
@@ -372,13 +478,12 @@ body {/*підключення тексту Roboto*/
     padding-top: 13px;
     font-size: 30px;/*має бути 30px з photopea*/
     font-weight: bold;/*photopea*/
-/*Lorem - 21 light*/
-/*Нахви х-ки - 21 bold*/
+/*Назви х-ки - 21 bold*/
     color: white;
     text-align: justify;
     padding-left: 15px;
 }
-.description {
+.description { /*Lorem - 21 light*/
     font-size: 21px;
     font-weight: 100;
     text-align: left;
@@ -396,7 +501,7 @@ body {/*підключення тексту Roboto*/
 .features-text1 {
     padding-top: 20px;
     font-weight: bold;
-    font-size: 50;
+    font-size: 21px;
 }
 .features-text2 {
     padding-top: 20px;
@@ -420,9 +525,13 @@ body {/*підключення тексту Roboto*/
     top: 35px;
     right: 65px;
 }
+.thousend {/*позиціонув для 4х знач чисел*/
+    position: absolute;
+    top: 35px;
+    right: 55px;
+}
 
 .product-button {
-
     padding-top: 30px;
     padding-left: 30px;
     padding-right: 30px;
@@ -443,8 +552,7 @@ body {/*підключення тексту Roboto*/
     font-weight: 100;
 }
 .btn-product-1 {
-    padding-bottom: 15px;
-    
+    padding-bottom: 15px;  
 }
 .one:hover {
     color: #2c71b8;
@@ -463,27 +571,11 @@ body {/*підключення тексту Roboto*/
     background-image: url("images/cart.png");
     background-size: 17px 17px;
 }
-
-
-
-/* 
-винести центи центи у другому товарі в окремий клас
-css - мультикласовість
-і спозиціонувати його  
-
-
-*/
-/*між іконками like and lighter 10px відступи
- від рамки товару і між ними обома*/
  
- /*30px top між крихтами та заголовком*/
- 
- /*60px від букви L до товару*/
+/*60px від букви L до товару*/
 
-/*30px від фільтра до товару*/
-/*------------------------------------------------------------------------*/
+/*photopea - визначити в макеті відстані між
+блоками тексту в тілі товару і між кнопками */
 
-/*додати до імені класу центів ім`я, щоб через
-мультикласовість спозиціонувати центи в css */
-
-/*до імені товарів додати мультикласовість*/
+/*в ідеалі перейменувати ім`я класів у товарах
+під кожен товар відповідно*/
