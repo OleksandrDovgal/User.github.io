@@ -234,58 +234,58 @@ body {/*підключення тексту Roboto*/
     width: 270px;
     height: 888px;
     background-color: rgba(202, 219, 237, 0.25);
-
-
+   
     border-right: 1px solid white;
-    /*device type: top 30-35px - bold 21px
-    left 30px - photopea;
-    text у фільтрі light 21px;
-    кнопка SUBMIT - 210x50, bold 21, 
-    всі кнопки в товарах;
-    3 блоки + строка + кнопка;
-    між device і laptop - 25px photopea;
-    laptop-tablet - 25px;
-    tablet-color-65px;
-    orange-RAM-65px;
-    8GB-строки-30px; 
-    від строки до кнопки- 30px;
-    Додоти написи флажків p і спозиціонувати його
-    */}
-
-.filter-label::before {
-    content: "";
-    display: block;
-    width: 10px;
-    height: 10px;
-    margin-top: 30px;
-    border: 1px solid white;
-    cursor: pointer;
 }
-.filter-input:checked + .filter-label::before{
-    background-color: white;
+.filter-checkbox {
+    padding: 22px; /*між квадратами*/
+    position: relative;
 }
-.filter-input { /*сховали checkbox*/
+.checkbox_input {
     display: none;
 }
-.filter-label {
+.checkbox_label {
     font-size: 21px;
     font-weight: 100;
     color: white;
     cursor: pointer;
-    position: relative;
+    position: absolute;
+    top: 25px; /*квадрат разом з підписом*/
+    left: 22px;  
 }
+.checkbox_label::before {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    border: 1px solid white;
+    position: absolute;
+    top: 4px;
+    left: -21px;/*квадрати*/
+    z-index: 1;
+} 
+.checkbox_input:checked + .checkbox_label::before{
+    background-color: white;
+}
+
+
+
+
+
+
+
+
 .DEVICE-TYPE {
     padding-top: 33px;
     padding-left: 30px;
-    padding-bottom: 65px;
+    padding-bottom: 55px;
     color: white;
     font-size: 21px;
     font-weight: bold;
     }   
 .COLOR {
-    /* padding-top: 30px; */
     padding-left: 30px;
-    padding-bottom: 65px;
+    padding-bottom: 55px;
     color: white;
     font-size: 21px;
     font-weight: bold;
@@ -296,11 +296,11 @@ body {/*підключення тексту Roboto*/
     color: white;
     font-size: 21px;
     font-weight: bold;
-    /*додати відступи лейблам та додати контент*/
+
     } 
 
 .filter-more-options {
-    /* padding-top: 30px; */
+
     padding-left: 37px;
     font-size: 21px;
     font-weight: 100;
@@ -313,13 +313,13 @@ body {/*підключення тексту Roboto*/
     padding-bottom: 30px;
 }
 .btn-submit {
-    width: 206px;
+    width: 208px;
     height: 48px;
     text-align: center;
     background-color: #2c71b8;
     color: white;
     border: 1px solid white;
-    font-size: 20px;
+    font-size: 21px;
     font-weight: 100;
 }
 .btn-submit:hover {
@@ -329,15 +329,8 @@ body {/*підключення тексту Roboto*/
 .filter-block-device-type {
     font-size: 21px;
     font-weight: 100;
-    
+
 }
-/* p{
-    font-size: 21px;
-    font-weight: 100;
-    position: absolute;
-    top: 10px;
-    
-} */
 
 
 
@@ -374,17 +367,13 @@ body {/*підключення тексту Roboto*/
     text-decoration: underline; 
     
 }
-/* .breadcrumbs > li:last-child { саме що і вище current_page
+/* .breadcrumbs > li:last-child {те саме що і вище current_page
     text-decoration: underline;
 } */
 .title {
     width: 500px;
     height: 100px;
-
-    /* padding-top: 30px; */
     padding-left: 15px;
-    /* margin-bottom: 50px; */
-    /* padding-bottom: 30px; */
     font-size: 48px;
     font-weight: bold;
     color: white;
@@ -407,10 +396,6 @@ body {/*підключення тексту Roboto*/
     height: 652px;
     /* padding-left: 15px; */
     text-align: center;/*центрування img по ширині*/
-    
-
-    /* padding-left: 15px;
-    padding-right: 15px; */
     border: 1px solid white;
     
     position: relative;
@@ -420,9 +405,8 @@ body {/*підключення тексту Roboto*/
  .product-desktop-img {
     width: 268px;
     height: 180px;
-
     background-color: #cadbed;
-     position: relative;
+    position: relative;
 } 
 .desktop-img {
     padding-top: 50px;
@@ -430,12 +414,8 @@ body {/*підключення тексту Roboto*/
 .icon {
     width: 28px;
     height: 28px;
-    /* padding: 10px; */
     border: 1px solid #2c71b8;
-    /* position: absolute; */
-    /* top: 0; 
-    left: 0; */
-}
+    }
 
 .lighter {
     position: absolute;
@@ -462,8 +442,6 @@ body {/*підключення тексту Roboto*/
     background-position: 4px 4px;
 }
 .like:hover {
-
-    /* background-color: #2c71b8; */
     background-image: url("images/favorite-white.png");
     background-repeat: no-repeat;
     background-position: 4px 4px;
@@ -471,9 +449,6 @@ body {/*підключення тексту Roboto*/
     background-color: #2c71b8;
 }
 
-
-
- 
  .title-product   {
     padding-top: 13px;
     font-size: 30px;/*має бути 30px з photopea*/
@@ -493,7 +468,6 @@ body {/*підключення тексту Roboto*/
     padding-right: 15px;
 }
 .features-body {
-    /* padding-top: 10px; */
     padding-left: 15px;
     color: white;
     text-align: left;
@@ -507,7 +481,6 @@ body {/*підключення тексту Roboto*/
     padding-top: 20px;
     font-size: 21px;
     font-weight: 300;
-
 }
 .product-price {
     padding-top: 35px;
@@ -530,7 +503,6 @@ body {/*підключення тексту Roboto*/
     top: 35px;
     right: 55px;
 }
-
 .product-button {
     padding-top: 30px;
     padding-left: 30px;
@@ -542,13 +514,12 @@ body {/*підключення тексту Roboto*/
 .btn {
     width: 206px;
     height: 48px;
-    /* border: 1px solid white; */
     text-align: center;
     background-color: #2c71b8;
     color: white;/*спільний колір 
     для обох кнопок*/
     border: 1px solid white;
-    font-size: 20px;
+    font-size: 21px;
     font-weight: 100;
 }
 .btn-product-1 {
@@ -572,10 +543,3 @@ body {/*підключення тексту Roboto*/
     background-size: 17px 17px;
 }
  
-/*60px від букви L до товару*/
-
-/*photopea - визначити в макеті відстані між
-блоками тексту в тілі товару і між кнопками */
-
-/*в ідеалі перейменувати ім`я класів у товарах
-під кожен товар відповідно*/
