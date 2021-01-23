@@ -1,18 +1,18 @@
 * {
     box-sizing: border-box;
 }
-body {/*підключення тексту Roboto*/
+body {   /*підключення тексту Roboto*/
     font-family: 'Roboto', sans-serif;
     background-image: url("images/background-color.png");
 }
-.container {      /*центрування всього блоку*/
+.container {    /*центрування всього блоку*/
     width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;/*автомат центрування*/
     margin-right: auto;/*автомат центрування*/
 }
-.row { /*обов`язково від`ємні марджини, такі як і педдінги в колонках, щоб вони накладались один на одного.Якщо не задавати мінусові маргіни, то відступи сумуватимуться колонки і контейнера і загальний відступ буде більший ніж потрібно*/
+.row {   /*обов`язково від`ємні марджини, такі як і педдінги в колонках, щоб вони накладались один на одного.Якщо не задавати мінусові маргіни, то відступи сумуватимуться колонки і контейнера і загальний відступ буде більший ніж потрібно*/
     margin-left: -15px;
     margin-right: -15px;
 }
@@ -26,35 +26,32 @@ body {/*підключення тексту Roboto*/
     padding-left: 15px;
     padding-right: 15px;
 }
-.col-md-3 { /*1 - колонка*/
+.col-md-3 {         /*1-колонка-ФІЛЬТР*/
     width: 25%;
 }
-.col-md-6 { /*2 - колонка*/
+.col-md-6 {         /*2 - колонка*/
     width: 50%;
 }
-.col-md-9 {
+.col-md-9 {/*2/колонка-breadcrumbs,title,sort,catalog*/
     width: 75%;
 }
-/* .col-md-4 {
-    width: 50%;
-} */
-.col-md-4 {/*1/4 від 12 */
+.col-md-4 {          /*1/4 від 12 */
     width: 33.3%;
-    /* margin-left: 5px; */
-    padding-left: 0;
-    padding-top: 30px;
+}
+.all-item {/*рухаю колонку товару через*/
+    padding-left: 0;/*окремий клас, щоб не поламати сітку*/
+    padding-bottom: 30px;
 }
 .catalog { /*вирівнювання всього рядка товарів*/
     margin-left: 15px;
-
 }
 
-
-
-.col-md-8 {
+/*-------------------------------------------------------------------------------------------*/
+/*.col-md-4 - 2шт-SORT і PRODUCTS*/
+.col-md-8 {  /*LAPTOPS AND TABLETS*/
     width: 50%;
 }
-.col-md-12 {
+.col-md-12 {    /*BREADCRUMBS*/
     width: 100%;
 }
 .header {/*прозорість Header`а*/
@@ -102,7 +99,6 @@ body {/*підключення тексту Roboto*/
     height: 30px;
     padding-left: 10px;
     font-weight: 300;
-    /* font-size: 21px;  */
     font-size: 16px;
     background-color: transparent;
     border: none;
@@ -127,7 +123,6 @@ body {/*підключення тексту Roboto*/
     position: absolute;
     right: 4px;
 }
-
 .cart { 
     width: 40px;
     height: 40px;
@@ -156,7 +151,6 @@ body {/*підключення тексту Roboto*/
     height: 24px;
 
     position: absolute;
-    
     top: 10px;
     left: 10px;
 }
@@ -181,7 +175,6 @@ body {/*підключення тексту Roboto*/
 .subposition {/*ВИПАДАЮЧЕ МЕНЮ*/
     display: block;
     position: relative;
-
 }
 .submenu {/*позиціонування ВИПАДАЮЧОГО МЕНЮ відносно li subposiion*/
     display: none;
@@ -220,21 +213,14 @@ body {/*підключення тексту Roboto*/
 
 
 
-
-
-
-
-
 .main {
     height: 2335px;
     border-top: 1px solid white;
 }
-
 .filter {/*фільтр*/
     width: 270px;
-    height: 888px;
+    height: 858px;
     background-color: rgba(202, 219, 237, 0.25);
-   
     border-right: 1px solid white;
 }
 .filter-checkbox {
@@ -250,7 +236,7 @@ body {/*підключення тексту Roboto*/
     color: white;
     cursor: pointer;
     position: absolute;
-    top: 25px; /*квадрат разом з підписом*/
+    top: 22px; /*квадрат разом з підписом*/
     left: 22px;  
 }
 .checkbox_label::before {
@@ -260,7 +246,7 @@ body {/*підключення тексту Roboto*/
     height: 8px;
     border: 1px solid white;
     position: absolute;
-    top: 4px;
+    top: 5px;  /*квадрати*/
     left: -21px;/*квадрати*/
     z-index: 1;
 } 
@@ -272,45 +258,38 @@ body {/*підключення тексту Roboto*/
 
 
 
-
-
-
 .DEVICE-TYPE {
     padding-top: 33px;
     padding-left: 30px;
-    padding-bottom: 55px;
+    padding-bottom: 45px;
     color: white;
     font-size: 21px;
     font-weight: bold;
-    }   
+}   
 .COLOR {
     padding-left: 30px;
-    padding-bottom: 55px;
+    padding-bottom: 45px;
     color: white;
     font-size: 21px;
     font-weight: bold;
-    } 
+} 
 .RAM-TYPE {
     padding-left: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 25px;
     color: white;
     font-size: 21px;
     font-weight: bold;
-
-    } 
-
+} 
 .filter-more-options {
-
     padding-left: 37px;
     font-size: 21px;
     font-weight: 100;
     color: white;
 }
-
 .filter-btn-submit {
-    padding-top: 30px;
+    padding-top: 25px;
     padding-left: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 25px;
 }
 .btn-submit {
     width: 208px;
@@ -329,13 +308,7 @@ body {/*підключення тексту Roboto*/
 .filter-block-device-type {
     font-size: 21px;
     font-weight: 100;
-
 }
-
-
-
-
-
 
 
 
@@ -359,13 +332,11 @@ body {/*підключення тексту Roboto*/
     width: 10px;
     height: 10px;
 }
-
 .current_page {
     font-weight: 300;
     font-size: 14px; 
     color: #96b8dc; 
-    text-decoration: underline; 
-    
+    text-decoration: underline;   
 }
 /* .breadcrumbs > li:last-child {те саме що і вище current_page
     text-decoration: underline;
@@ -379,11 +350,9 @@ body {/*підключення тексту Roboto*/
     color: white;
 }    
 .sort {
-    float: right;
-    padding-top: 0px;
-    padding-left: 0px;
-    padding-right: 0px;
-    
+    width: 270px;
+    margin-top: 20px;
+    margin-left: 148px;
 }
 
 
@@ -400,8 +369,6 @@ body {/*підключення тексту Roboto*/
     
     position: relative;
 }
-
-
  .product-desktop-img {
     width: 268px;
     height: 180px;
@@ -415,8 +382,7 @@ body {/*підключення тексту Roboto*/
     width: 28px;
     height: 28px;
     border: 1px solid #2c71b8;
-    }
-
+}
 .lighter {
     position: absolute;
     top: 10px;
@@ -448,7 +414,6 @@ body {/*підключення тексту Roboto*/
     background-size: 18px 18px;
     background-color: #2c71b8;
 }
-
  .title-product   {
     padding-top: 13px;
     font-size: 30px;/*має бути 30px з photopea*/
@@ -533,7 +498,6 @@ body {/*підключення тексту Roboto*/
     background-color: #598fc7;
     background-image: url("images/cart-white.png");
     background-repeat: no-repeat;
-    /* background-size: 15px 15px; */
     background-position: right 13px top 13px;
 }
 .two:hover {
@@ -542,4 +506,8 @@ body {/*підключення тексту Roboto*/
     background-image: url("images/cart.png");
     background-size: 17px 17px;
 }
- 
+
+
+/*зробити, щоб кутик на submenu не зникав*/
+/*позиціоную колонку товару
+     через окремий клас, щоб не поламати сітку*/
