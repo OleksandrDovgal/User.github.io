@@ -1,212 +1,295 @@
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
-body {   /*підключення тексту Roboto*/
-    font-family: 'Roboto', sans-serif;
-    background-image: url("images/background-color.png");
+
+body {
+	/*підключення тексту Roboto*/
+	font-family: 'Roboto', sans-serif;
+	background-image: url("images/background-color.png");
 }
-.container {    /*центрування всього блоку*/
-    width: 1200px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;/*автомат центрування*/
-    margin-right: auto;/*автомат центрування*/
+
+.container {
+	/*центрування всього блоку*/
+	width: 1200px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-left: auto;
+	/*автомат центрування*/
+	margin-right: auto;
+	/*автомат центрування*/
 }
-.row {   /*обов`язково від`ємні марджини, такі як і педдінги в колонках, щоб вони накладались один на одного.Якщо не задавати мінусові маргіни, то відступи сумуватимуться колонки і контейнера і загальний відступ буде більший ніж потрібно*/
-    margin-left: -15px;
-    margin-right: -15px;
+
+.row {
+	/*обов`язково від`ємні марджини, такі як і педдінги в колонках, щоб вони накладались один на одного.Якщо не задавати мінусові маргіни, то відступи сумуватимуться колонки і контейнера і загальний відступ буде більший ніж потрібно*/
+	margin-left: -15px;
+	margin-right: -15px;
 }
-.row::after, .menu::after, .breadcrumbs::after {/*відміна обтікання row і menu*/
-    content: "";
-    display: block;
-    clear: both;
+
+.row::after,
+.menu::after,
+.breadcrumbs::after {
+	/*відміна обтікання row і menu*/
+	content: "";
+	display: block;
+	clear: both;
 }
-[class*="col-"] {/*колонки, задаємо відступи однакові із від`ємними марджинами в .row(вище),щоб визначали правильно свої розміри- там де зона контейнера*/
-    float: left;
-    padding-left: 15px;
-    padding-right: 15px;
+
+[class*="col-"] {
+	/*колонки, задаємо відступи однакові із від`ємними марджинами в .row(вище),щоб визначали правильно свої розміри- там де зона контейнера*/
+	float: left;
+	padding-left: 15px;
+	padding-right: 15px;
 }
-.col-md-3 {         /*1-колонка-ФІЛЬТР*/
-    width: 25%;
+
+.col-md-3 {
+	/*1-колонка-ФІЛЬТР*/
+	width: 25%;
 }
-.col-md-6 {         /*2 - колонка*/
-    width: 50%;
+
+.col-md-6 {
+	/*2 - колонка*/
+	width: 50%;
 }
-.col-md-9 {/*2/колонка-breadcrumbs,title,sort,catalog*/
-    width: 75%;
+
+.col-md-9 {
+	/*2/колонка-breadcrumbs,title,sort,catalog*/
+	width: 75%;
 }
-.col-md-4 {          /*1/4 від 12 */
-    width: 33.3%;
+
+.col-md-4 {
+	/*1/4 від 12 */
+	width: 33.3%;
 }
-.all-item {/*рухаю колонку товару через*/
-    padding-left: 0;/*окремий клас, щоб не поламати сітку*/
-    padding-bottom: 30px;
+
+.all-item {
+	/*рухаю колонку товару через*/
+	padding-left: 0;
+	/*окремий клас, щоб не поламати сітку*/
+	padding-bottom: 30px;
 }
-.catalog { /*вирівнювання всього рядка товарів*/
-    margin-left: 15px;
+
+.catalog {
+	/*вирівнювання всього рядка товарів*/
+	margin-left: 15px;
 }
 
 /*-------------------------------------------------------------------------------------------*/
 /*.col-md-4 - 2шт-SORT і PRODUCTS*/
-.col-md-8 {  /*LAPTOPS AND TABLETS*/
-    width: 50%;
+.col-md-8 {
+	/*LAPTOPS AND TABLETS*/
+	width: 50%;
 }
-.col-md-12 {    /*BREADCRUMBS*/
-    width: 100%;
+
+.col-md-12 {
+	/*BREADCRUMBS*/
+	width: 100%;
 }
-.header {/*прозорість Header`а*/
-    background-color: rgba(255, 255, 255, 0.75);
-    padding: 25px 0;/*1)верх-низ; 2)право-ліво*//*те саме margin*/
+
+.header {
+	/*прозорість Header`а*/
+	background-color: rgba(255, 255, 255, 0.75);
+	padding: 25px 0;
+	/*1)верх-низ; 2)право-ліво*/
+	/*те саме margin*/
 }
-.logo {/*відступ*/
-    margin-top: 7px;
+
+.logo {
+	/*відступ*/
+	margin-top: 7px;
 }
-.menu > li {
-    float: left;
-    width: 25%;
-    border-left: 1px solid #2c71b8;/*ліві рамки*/
+
+.menu>li {
+	float: left;
+	width: 25%;
+	border-left: 1px solid #2c71b8;
+	/*ліві рамки*/
 }
-.menu > li:last-child {/*права рамка останньго елементу*/
-    border-right: 1px solid #2c71b8;
-    /*first-child*/ /*nth-child(потрібний номер)*/
+
+.menu>li:last-child {
+	/*права рамка останньго елементу*/
+	border-right: 1px solid #2c71b8;
+	/*first-child*/
+	/*nth-child(потрібний номер)*/
 }
-.menu > li > a {
-    display: block;/*однакові розміри a та li*/
-    text-decoration: none;
-    height: 50px;
-    font-size: 21px;
-    font-weight: 300;/*Roboto Light - розмір*/
-    color: #2c71b8;
-    text-align: center;/*центрування контенту*/
-    line-height: 50px;/*центрування контенту*/
+
+.menu>li>a {
+	display: block;
+	/*однакові розміри a та li*/
+	text-decoration: none;
+	height: 50px;
+	font-size: 21px;
+	font-weight: 300;
+	/*Roboto Light - розмір*/
+	color: #2c71b8;
+	text-align: center;
+	/*центрування контенту*/
+	line-height: 50px;
+	/*центрування контенту*/
 }
-.menu > li > a:hover {/*дії при наведенні на <a> */
-    color: white;
-    background-color: #2c71b8 ;
+
+.menu>li>a:hover {
+	/*дії при наведенні на <a> */
+	color: white;
+	background-color: #2c71b8;
 }
+
 .search {
-    width: 200px;
-    height: 40px;
-    display: block;
-    border: 1px solid #2c71b8;
-    padding: 5px;
-    margin-top: 7px; /*розміщення форми пошуку відносно синіх рисок*/
+	width: 200px;
+	height: 40px;
+	display: block;
+	border: 1px solid #2c71b8;
+	padding: 5px;
+	margin-top: 7px;
+	/*розміщення форми пошуку відносно синіх рисок*/
 
-    position: relative;
+	position: relative;
 }
+
 .input-search-text {
-    width: 190px;
-    height: 30px;
-    padding-left: 10px;
-    font-weight: 300;
-    font-size: 16px;
-    background-color: transparent;
-    border: none;
-    position: absolute;
-    background-image: url("images/search.png");
-    background-repeat: no-repeat;/*одна картинка. Викл повтор*/
-    background-position: 166px 9px;
-    z-index: 2;/*img лупа поверх кнопки*/
+	width: 190px;
+	height: 30px;
+	padding-left: 10px;
+	font-weight: 300;
+	font-size: 16px;
+	background-color: transparent;
+	border: none;
+	position: absolute;
+	background-image: url("images/search.png");
+	background-repeat: no-repeat;
+	/*одна картинка. Викл повтор*/
+	background-position: 166px 9px;
+	z-index: 2;
+	/*img лупа поверх кнопки*/
 }
-.input-search-text:focus{ 
-    outline: none; /*прибираєм обводку input*/
-}
-.input-search-text::placeholder {/*колір тексту   PLACEHOLDER*/
-    color: #2c71b8;
-}
-.input-search-button {/*пошук у формі + картинка*/
-    width: 30px;
-    height: 30px;
-    background-color: #2c71b8;
-    background-size: 18px 16px;
-    border: none;
-    position: absolute;
-    right: 4px;
-}
-.cart { 
-    width: 40px;
-    height: 40px;
-    background-color: white;
-    margin-top: 5px;
-    margin-left: 5px;
 
-    position: relative;
+.input-search-text:focus {
+	outline: none;
+	/*прибираєм обводку input*/
 }
+
+.input-search-text::placeholder {
+	/*колір тексту   PLACEHOLDER*/
+	color: #2c71b8;
+}
+
+.input-search-button {
+	/*пошук у формі + картинка*/
+	width: 30px;
+	height: 30px;
+	background-color: #2c71b8;
+	background-size: 18px 16px;
+	border: none;
+	position: absolute;
+	right: 4px;
+}
+
+.cart {
+	width: 40px;
+	height: 40px;
+	background-color: white;
+	margin-top: 5px;
+	margin-left: 5px;
+
+	position: relative;
+}
+
 .products-count {
-    background-color: #2c71b8;
-    color: white;
-    border-radius: 100%;
-    width: 22px;
-    height: 22px;
-    text-align: center;
-    line-height: 22px;
-   
-    position: absolute;
-    top: -11px;
-    left: -11px;
-    background-image: url("images/cart.png"); 
-}
-.cart-logo {/*центруання лого корзини*/
-    width: 20px;
-    height: 24px;
+	background-color: #2c71b8;
+	color: white;
+	border-radius: 100%;
+	width: 22px;
+	height: 22px;
+	text-align: center;
+	line-height: 22px;
 
-    position: absolute;
-    top: 10px;
-    left: 10px;
+	position: absolute;
+	top: -11px;
+	left: -11px;
+	background-image: url("images/cart.png");
 }
-.submenu > li {/*рзмір ВИПАДАЮЧОГО МЕНЮ*/
-    width: 286px;
-    position: relative;
-    z-index: 2;
+
+.cart-logo {
+	/*центруання лого корзини*/
+	width: 20px;
+	height: 24px;
+
+	position: absolute;
+	top: 10px;
+	left: 10px;
 }
-.submenu > li > a {
-    display: block;/*однакові розміри a та li*/
-    text-decoration: none ;
-    height: 50px;
-    font-size: 21px;
-    font-weight: 300;/*Roboto Light - розмір*/
-    color: white;
-    background-color: #2c71b8;
-    text-align: left;/*центрування контенту*/
-    padding-left: 30px;
-    line-height: 50px;  
-    z-index: -10;
-} 
-.subposition {/*ВИПАДАЮЧЕ МЕНЮ*/
-    display: block;
-    position: relative;
+
+.submenu>li {
+	/*рзмір ВИПАДАЮЧОГО МЕНЮ*/
+	width: 286px;
+	position: relative;
+	z-index: 2;
 }
-.submenu {/*позиціонування ВИПАДАЮЧОГО МЕНЮ відносно li subposiion*/
-    display: none;
-    position: absolute;
-    left: -1px;
+
+.submenu>li>a {
+	display: block;
+	/*однакові розміри a та li*/
+	text-decoration: none;
+	height: 50px;
+	font-size: 21px;
+	font-weight: 300;
+	/*Roboto Light - розмір*/
+	color: white;
+	background-color: #2c71b8;
+	text-align: left;
+	/*центрування контенту*/
+	padding-left: 30px;
+	line-height: 50px;
+	z-index: -10;
 }
+
+.subposition {
+	/*ВИПАДАЮЧЕ МЕНЮ*/
+	display: block;
+	position: relative;
+}
+
+.submenu {
+	/*позиціонування ВИПАДАЮЧОГО МЕНЮ відносно li subposiion*/
+	display: none;
+	position: absolute;
+	left: -1px;
+}
+
 .submenu ul li {
-    position: absolute;
+	position: absolute;
 }
+
 .menu li:hover .submenu {
-    display: block;
+	display: block;
 }
-.submenu > li > a:hover {/*дії при наведенні на <a> */
-    color: #2c71b8;
-    background-color: white ;
+
+.submenu>li>a:hover {
+	/*дії при наведенні на <a> */
+	color: #2c71b8;
+	background-color: white;
 }
-.menu > li:hover > a {/*hover залишається, навіть коли ми не на ньому*/
-    background-color: #2c71b8;
-    color: white;
+
+.menu>li:hover>a {
+	/*hover залишається, навіть коли ми не на ньому*/
+	background-color: #2c71b8;
+	color: white;
 }
-.active{
-    background-image: url("images/arrow-default.png");
-    background-repeat: no-repeat;
-    background-size: 10px 10px;
-    background-position: 118px 20px;
+
+.active {
+	background-image: url("images/arrow-default.png");
+	background-repeat: no-repeat;
+	background-size: 10px 10px;
+	background-position: 118px 20px;
 }
-.active:hover { 
-    background-image: url("images/arrow-down.png");/*додали кутик в меню*/
-    background-repeat: no-repeat;
-    background-size: 10px 10px; 
-    background-position: 118px 20px;/*позиціонуємо 1-X 2-Y*/
-}   
+
+.active:hover {
+	background-image: url("images/arrow-down.png");
+	/*додали кутик в меню*/
+	background-repeat: no-repeat;
+	background-size: 10px 10px;
+	background-position: 118px 20px;
+	/*позиціонуємо 1-X 2-Y*/
+}
 
 
 
@@ -214,44 +297,55 @@ body {   /*підключення тексту Roboto*/
 
 
 .main {
-    height: 2335px;
-    border-top: 1px solid white;
+	height: 2335px;
+	border-top: 1px solid white;
 }
-.filter {/*фільтр*/
-    width: 270px;
-    height: 858px;
-    background-color: rgba(202, 219, 237, 0.25);
-    border-right: 1px solid white;
+
+.filter {
+	/*фільтр*/
+	width: 270px;
+	height: 858px;
+	background-color: rgba(202, 219, 237, 0.25);
+	border-right: 1px solid white;
 }
+
 .filter-checkbox {
-    padding: 22px; /*між квадратами*/
-    position: relative;
+	padding: 22px;
+	/*між квадратами*/
+	position: relative;
 }
+
 .checkbox_input {
-    display: none;
+	display: none;
 }
+
 .checkbox_label {
-    font-size: 21px;
-    font-weight: 100;
-    color: white;
-    cursor: pointer;
-    position: absolute;
-    top: 22px; /*квадрат разом з підписом*/
-    left: 22px;  
+	font-size: 21px;
+	font-weight: 100;
+	color: white;
+	cursor: pointer;
+	position: absolute;
+	top: 22px;
+	/*квадрат разом з підписом*/
+	left: 22px;
 }
+
 .checkbox_label::before {
-    content: "";
-    display: block;
-    width: 8px;
-    height: 8px;
-    border: 1px solid white;
-    position: absolute;
-    top: 5px;  /*квадрати*/
-    left: -21px;/*квадрати*/
-    z-index: 1;
-} 
-.checkbox_input:checked + .checkbox_label::before{
-    background-color: white;
+	content: "";
+	display: block;
+	width: 8px;
+	height: 8px;
+	border: 1px solid white;
+	position: absolute;
+	top: 5px;
+	/*квадрати*/
+	left: -21px;
+	/*квадрати*/
+	z-index: 1;
+}
+
+.checkbox_input:checked+.checkbox_label::before {
+	background-color: white;
 }
 
 
@@ -259,100 +353,113 @@ body {   /*підключення тексту Roboto*/
 
 
 .DEVICE-TYPE {
-    padding-top: 33px;
-    padding-left: 30px;
-    padding-bottom: 45px;
-    color: white;
-    font-size: 21px;
-    font-weight: bold;
-}   
+	padding-top: 33px;
+	padding-left: 30px;
+	padding-bottom: 45px;
+	color: white;
+	font-size: 21px;
+	font-weight: bold;
+}
+
 .COLOR {
-    padding-left: 30px;
-    padding-bottom: 45px;
-    color: white;
-    font-size: 21px;
-    font-weight: bold;
-} 
+	padding-left: 30px;
+	padding-bottom: 45px;
+	color: white;
+	font-size: 21px;
+	font-weight: bold;
+}
+
 .RAM-TYPE {
-    padding-left: 30px;
-    padding-bottom: 25px;
-    color: white;
-    font-size: 21px;
-    font-weight: bold;
-} 
+	padding-left: 30px;
+	padding-bottom: 25px;
+	color: white;
+	font-size: 21px;
+	font-weight: bold;
+}
+
 .filter-more-options {
-    padding-left: 37px;
-    font-size: 21px;
-    font-weight: 100;
-    color: white;
+	padding-left: 37px;
+	font-size: 21px;
+	font-weight: 100;
+	color: white;
 }
+
 .filter-btn-submit {
-    padding-top: 25px;
-    padding-left: 30px;
-    padding-bottom: 25px;
+	padding-top: 25px;
+	padding-left: 30px;
+	padding-bottom: 25px;
 }
+
 .btn-submit {
-    width: 208px;
-    height: 48px;
-    text-align: center;
-    background-color: #2c71b8;
-    color: white;
-    border: 1px solid white;
-    font-size: 21px;
-    font-weight: 100;
+	width: 208px;
+	height: 48px;
+	text-align: center;
+	background-color: #2c71b8;
+	color: white;
+	border: 1px solid white;
+	font-size: 21px;
+	font-weight: 100;
 }
+
 .btn-submit:hover {
-    color: #2c71b8;
-    background-color: white;
+	color: #2c71b8;
+	background-color: white;
 }
+
 .filter-block-device-type {
-    font-size: 21px;
-    font-weight: 100;
+	font-size: 21px;
+	font-weight: 100;
 }
 
 
 
 
 .breadcrumbs {
-    padding-bottom: 28px;
+	padding-bottom: 28px;
 }
-.breadcrumbs > li {
-    float: left;
-    padding-top: 30px; 
-    padding-right: 5px;
+
+.breadcrumbs>li {
+	float: left;
+	padding-top: 30px;
+	padding-right: 5px;
 }
-.breadcrumbs > li > a {
-    list-style: none;
-    text-decoration: none;  
-    color: #96b8dc;
-    font-weight: 300;
-    font-size: 14px;   
+
+.breadcrumbs>li>a {
+	list-style: none;
+	text-decoration: none;
+	color: #96b8dc;
+	font-weight: 300;
+	font-size: 14px;
 }
+
 .breadcrumbs-img {
-    width: 10px;
-    height: 10px;
+	width: 10px;
+	height: 10px;
 }
+
 .current_page {
-    font-weight: 300;
-    font-size: 14px; 
-    color: #96b8dc; 
-    text-decoration: underline;   
+	font-weight: 300;
+	font-size: 14px;
+	color: #96b8dc;
+	text-decoration: underline;
 }
+
 /* .breadcrumbs > li:last-child {те саме що і вище current_page
     text-decoration: underline;
 } */
 .title {
-    width: 500px;
-    height: 100px;
-    padding-left: 15px;
-    font-size: 48px;
-    font-weight: bold;
-    color: white;
-}    
+	width: 500px;
+	height: 100px;
+	padding-left: 15px;
+	font-size: 48px;
+	font-weight: bold;
+	color: white;
+}
+
 .sort {
-    width: 270px;
-    margin-top: 20px;
-    margin-left: 148px;
+	width: 270px;
+	margin-top: 20px;
+	margin-left: 148px;
 }
 
 
@@ -360,151 +467,182 @@ body {   /*підключення тексту Roboto*/
 
 
 
-.desktop {/*1 продукт1*/
-    width: 270px;
-    height: 652px;
-    /* padding-left: 15px; */
-    text-align: center;/*центрування img по ширині*/
-    border: 1px solid white;
-    
-    position: relative;
+.desktop {
+	/*1 продукт1*/
+	width: 270px;
+	height: 652px;
+	/* padding-left: 15px; */
+	text-align: center;
+	/*центрування img по ширині*/
+	border: 1px solid white;
+
+	position: relative;
 }
- .product-desktop-img {
-    width: 268px;
-    height: 180px;
-    background-color: #cadbed;
-    position: relative;
-} 
+
+.product-desktop-img {
+	width: 268px;
+	height: 180px;
+	background-color: #cadbed;
+	position: relative;
+}
+
 .desktop-img {
-    padding-top: 50px;
+	padding-top: 50px;
 }
+
 .icon {
-    width: 28px;
-    height: 28px;
-    border: 1px solid #2c71b8;
+	width: 28px;
+	height: 28px;
+	border: 1px solid #2c71b8;
 }
+
 .lighter {
-    position: absolute;
-    top: 10px;
-    right:  10px;
-    background-image: url("images/lighter.png");
-    background-repeat: no-repeat;
-    background-position: 3px 3px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	background-image: url("images/lighter.png");
+	background-repeat: no-repeat;
+	background-position: 3px 3px;
 }
+
 .lighter:hover {
-    padding: 5px;
-    background-color: #2c71b8;
-    background-image: url("images/lighter-white.png");
-    background-repeat: no-repeat;
-    background-position: 4px 4px;
-    background-size: 18px 18px;
+	padding: 5px;
+	background-color: #2c71b8;
+	background-image: url("images/lighter-white.png");
+	background-repeat: no-repeat;
+	background-position: 4px 4px;
+	background-size: 18px 18px;
 }
+
 .like {
-    position: absolute;
-    top: 50px;
-    right: 10px; 
-    background-image: url("images/favorite.png");
-    background-repeat: no-repeat;
-    background-position: 4px 4px;
+	position: absolute;
+	top: 50px;
+	right: 10px;
+	background-image: url("images/favorite.png");
+	background-repeat: no-repeat;
+	background-position: 4px 4px;
 }
+
 .like:hover {
-    background-image: url("images/favorite-white.png");
-    background-repeat: no-repeat;
-    background-position: 4px 4px;
-    background-size: 18px 18px;
-    background-color: #2c71b8;
+	background-image: url("images/favorite-white.png");
+	background-repeat: no-repeat;
+	background-position: 4px 4px;
+	background-size: 18px 18px;
+	background-color: #2c71b8;
 }
- .title-product   {
-    padding-top: 13px;
-    font-size: 30px;/*має бути 30px з photopea*/
-    font-weight: bold;/*photopea*/
-/*Назви х-ки - 21 bold*/
-    color: white;
-    text-align: justify;
-    padding-left: 15px;
+
+.title-product {
+	padding-top: 13px;
+	font-size: 30px;
+	/*має бути 30px з photopea*/
+	font-weight: bold;
+	/*photopea*/
+	/*Назви х-ки - 21 bold*/
+	color: white;
+	text-align: justify;
+	padding-left: 15px;
 }
-.description { /*Lorem - 21 light*/
-    font-size: 21px;
-    font-weight: 100;
-    text-align: left;
-    color: white;
-    padding-top: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
+
+.description {
+	/*Lorem - 21 light*/
+	font-size: 21px;
+	font-weight: 100;
+	text-align: left;
+	color: white;
+	padding-top: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
 }
+
 .features-body {
-    padding-left: 15px;
-    color: white;
-    text-align: left;
+	padding-left: 15px;
+	color: white;
+	text-align: left;
 }
+
 .features-text1 {
-    padding-top: 20px;
-    font-weight: bold;
-    font-size: 21px;
+	padding-top: 20px;
+	font-weight: bold;
+	font-size: 21px;
 }
+
 .features-text2 {
-    padding-top: 20px;
-    font-size: 21px;
-    font-weight: 300;
+	padding-top: 20px;
+	font-size: 21px;
+	font-weight: 300;
 }
+
 .product-price {
-    padding-top: 35px;
-    font-size: 35px;/*48 bold(photoea)-35факт */
-    font-weight: bold;
-    text-align: center;
-    color: white;
+	padding-top: 35px;
+	font-size: 35px;
+	/*48 bold(photoea)-35факт */
+	font-weight: bold;
+	text-align: center;
+	color: white;
 
-    position: relative;
+	position: relative;
 }
+
 .price-cent {
-    font-size: 21px;/*20px-факт*/
+	font-size: 21px;
+	/*20px-факт*/
 
-    position: absolute;
-    top: 35px;
-    right: 65px;
+	position: absolute;
+	top: 35px;
+	right: 65px;
 }
-.thousend {/*позиціонув для 4х знач чисел*/
-    position: absolute;
-    top: 35px;
-    right: 55px;
+
+.thousend {
+	/*позиціонув для 4х знач чисел*/
+	position: absolute;
+	top: 35px;
+	right: 55px;
 }
+
 .product-button {
-    padding-top: 30px;
-    padding-left: 30px;
-    padding-right: 30px;
+	padding-top: 30px;
+	padding-left: 30px;
+	padding-right: 30px;
 }
+
 .product-2 {
-    padding-top: 20px;
+	padding-top: 20px;
 }
+
 .btn {
-    width: 206px;
-    height: 48px;
-    text-align: center;
-    background-color: #2c71b8;
-    color: white;/*спільний колір 
+	width: 206px;
+	height: 48px;
+	text-align: center;
+	background-color: #2c71b8;
+	color: white;
+	/*спільний колір 
     для обох кнопок*/
-    border: 1px solid white;
-    font-size: 21px;
-    font-weight: 100;
+	border: 1px solid white;
+	font-size: 21px;
+	font-weight: 100;
 }
+
 .btn-product-1 {
-    padding-bottom: 15px;  
+	padding-bottom: 15px;
 }
+
 .one:hover {
-    color: #2c71b8;
-    background-color: white;
+	color: #2c71b8;
+	background-color: white;
 }
+
 .two {
-    background-color: #598fc7;
-    background-image: url("images/cart-white.png");
-    background-repeat: no-repeat;
-    background-position: right 13px top 13px;
+	background-color: #598fc7;
+	background-image: url("images/cart-white.png");
+	background-repeat: no-repeat;
+	background-position: right 13px top 13px;
 }
+
 .two:hover {
-    color: #598fc7;
-    background-color: white;
-    background-image: url("images/cart.png");
-    background-size: 17px 17px;
+	color: #598fc7;
+	background-color: white;
+	background-image: url("images/cart.png");
+	background-size: 17px 17px;
 }
 
 
