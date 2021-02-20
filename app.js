@@ -1,7 +1,6 @@
 // add to cart
 let productsCountEl = document.getElementById("products-count");
 let addToCartButtons = document.querySelectorAll(".add_to_cart");
-
 console.log(addToCartButtons);
 
 for (let i = 0; i < addToCartButtons.length; i++) {
@@ -13,5 +12,29 @@ for (let i = 0; i < addToCartButtons.length; i++) {
 	})
 }
 
-// let addToCartButtons = document.querySelectorAll(".btn two");
-// console.log(addToCartButtons);
+
+
+
+let favorite = document.getElementById("favorite");
+console.log(favorite);
+favorite.addEventListener("click", function(e) {
+	e.target.style.backgroundColor = "black"
+})
+
+// favorite.addEventListener("click", function(e) {
+// 	favorite.style.backgroundColor = "grey"
+// })
+
+
+// let favorite = document.getElementById("favorite");
+
+// favorite.addEventListener("click", function(e) {
+// 	e.target.style.backgroundColor = "red";
+// })
+
+// let like = document.querySelectorAll(".for_js");
+// console.log(like);
+
+// like.addEventListener("click", function(e) {
+// 	e.targt.style.backgroundColor = "red";
+// })
