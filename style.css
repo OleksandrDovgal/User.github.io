@@ -523,7 +523,8 @@ body {
 	background-position: 4px 4px;
 }
 
-.like:hover {
+.like:hover,
+.liked {
 	background-image: url("images/favorite-white.png");
 	background-repeat: no-repeat;
 	background-position: 4px 4px;
@@ -649,3 +650,64 @@ body {
 /*зробити, щоб кутик на submenu не зникав*/
 /*позиціоную колонку товару
 через окремий клас, щоб не поламати сітку*/
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 100;
+	display: none;
+}
+
+.modal-block {
+	width: 300px;
+	height: 200px;
+	background-color: white;
+	border: 1px solid grey;
+	padding: 15px;
+	margin: 80px auto;
+}
+
+.form-field {
+	margin: 10px 0;
+}
+
+.form-field input {
+	width: 100%;
+	height: 30px;
+	padding: 5px;
+}
+
+.close-btn {
+	text-align: right;
+	cursor: pointer;
+}
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: block;
+}
+
+/*------------------Для СЛАЙДЕРА---------------------------*/
+
+.col-md-12 {
+	width: 100%;
+}
+
+.slider-block>div {
+	padding: 150px 0;
+	text-align: center;
+	color: white;
+	font-size: 50px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+	font-style: 30px;
+	color: yellow;
+}
